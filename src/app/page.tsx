@@ -98,7 +98,7 @@ export default function Home() {
       <section 
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
-        className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-aurelia-charcoal select-none"
+        className="relative h-screen min-h-[680px] w-full flex items-center justify-center overflow-hidden bg-aurelia-charcoal select-none"
       >
         {/* Carousel Background Images with Ken Burns Zoom Effect */}
         {HERO_SLIDES.map((s, index) => (
@@ -122,7 +122,7 @@ export default function Home() {
         ))}
 
         {/* Hero Copy Content */}
-        <div className="relative z-20 max-w-5xl mx-auto px-6 text-center text-white space-y-5 flex flex-col justify-center items-center my-auto -mt-6 sm:-mt-8 pb-16 sm:pb-20">
+        <div className="relative z-20 max-w-5xl mx-auto px-6 text-center text-white space-y-5 flex flex-col justify-center items-center pt-8 pb-16">
           <div className="flex justify-center">
             <span key={`sub-${currentSlide}`} className="inline-block text-[10px] sm:text-xs tracking-[0.35em] uppercase text-[#F3E5AB] font-medium animate-fade-in px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-[#F3E5AB]/30 shadow-lg">
               {slide.subtitle}
@@ -155,21 +155,21 @@ export default function Home() {
         {/* Navigation Arrows (Desktop & Tablet) */}
         <button
           onClick={handlePrevSlide}
-          className="hidden sm:flex absolute left-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full border border-white/20 bg-black/20 backdrop-blur-md text-white items-center justify-center hover:bg-aurelia-gold hover:border-aurelia-gold transition-all duration-300 group"
+          className="hidden sm:flex absolute left-6 sm:left-10 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full border border-white/20 bg-black/20 backdrop-blur-md text-white items-center justify-center hover:bg-aurelia-gold hover:border-aurelia-gold transition-all duration-300 group"
           aria-label="Previous Slide"
         >
           <ChevronLeft className="w-5 h-5 group-hover:-translate-x-0.5 transition-transform" />
         </button>
         <button
           onClick={handleNextSlide}
-          className="hidden sm:flex absolute right-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full border border-white/20 bg-black/20 backdrop-blur-md text-white items-center justify-center hover:bg-aurelia-gold hover:border-aurelia-gold transition-all duration-300 group"
+          className="hidden sm:flex absolute right-6 sm:right-10 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full border border-white/20 bg-black/20 backdrop-blur-md text-white items-center justify-center hover:bg-aurelia-gold hover:border-aurelia-gold transition-all duration-300 group"
           aria-label="Next Slide"
         >
           <ChevronRight className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
         </button>
 
         {/* Slide Progress Bar Indicators */}
-        <div className="absolute bottom-20 sm:bottom-24 left-0 right-0 z-30 flex flex-col items-center space-y-3 px-6">
+        <div className="absolute bottom-16 sm:bottom-20 left-0 right-0 z-30 flex flex-col items-center space-y-3 px-6">
           {/* Progress Indicators */}
           <div className="flex items-center space-x-3 max-w-xs w-full justify-center">
             {HERO_SLIDES.map((_, index) => (
