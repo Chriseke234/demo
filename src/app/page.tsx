@@ -122,20 +122,20 @@ export default function Home() {
         ))}
 
         {/* Hero Copy Content */}
-        <div className="relative z-20 max-w-5xl mx-auto px-6 text-center text-white space-y-5 pt-12 sm:pt-16 pb-32 sm:pb-36">
+        <div className="relative z-20 max-w-5xl mx-auto px-6 text-center text-white space-y-5 flex flex-col justify-center items-center my-auto -mt-6 sm:-mt-8 pb-16 sm:pb-20">
           <div className="flex justify-center">
             <span key={`sub-${currentSlide}`} className="inline-block text-[10px] sm:text-xs tracking-[0.35em] uppercase text-[#F3E5AB] font-medium animate-fade-in px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-[#F3E5AB]/30 shadow-lg">
               {slide.subtitle}
             </span>
           </div>
-          <h1 key={`title-${currentSlide}`} className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight tracking-tight font-light text-white animate-fade-in">
+          <h1 key={`title-${currentSlide}`} className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight tracking-tight font-light text-white animate-fade-in max-w-4xl">
             {slide.title}<span className="italic font-normal">{slide.italicTitle}</span>
           </h1>
           <p key={`desc-${currentSlide}`} className="text-xs sm:text-sm md:text-base text-white/80 max-w-2xl mx-auto font-light leading-relaxed tracking-wide animate-fade-in">
             {slide.description}
           </p>
 
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 pt-2 pb-6 animate-fade-in">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 pt-3 animate-fade-in">
             <Link
               href={slide.ctaHref}
               className="w-full sm:w-auto bg-aurelia-gold text-white hover:bg-white hover:text-aurelia-charcoal text-xs uppercase tracking-widest px-8 py-3.5 transition-all duration-300 font-semibold shadow-lg rounded-sm"
@@ -169,7 +169,7 @@ export default function Home() {
         </button>
 
         {/* Slide Progress Bar Indicators */}
-        <div className="absolute bottom-24 sm:bottom-28 left-0 right-0 z-30 flex flex-col items-center space-y-3 px-6">
+        <div className="absolute bottom-20 sm:bottom-24 left-0 right-0 z-30 flex flex-col items-center space-y-3 px-6">
           {/* Progress Indicators */}
           <div className="flex items-center space-x-3 max-w-xs w-full justify-center">
             {HERO_SLIDES.map((_, index) => (
