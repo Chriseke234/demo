@@ -123,9 +123,11 @@ export default function Home() {
 
         {/* Hero Copy Content */}
         <div className="relative z-20 max-w-5xl mx-auto px-6 text-center text-white space-y-6 pt-16">
-          <span key={`sub-${currentSlide}`} className="text-[10px] sm:text-xs tracking-[0.4em] uppercase text-aurelia-gold font-semibold animate-fade-in block">
-            {slide.subtitle}
-          </span>
+          <div className="flex justify-center">
+            <span key={`sub-${currentSlide}`} className="inline-block text-[10px] sm:text-xs tracking-[0.35em] uppercase text-[#F3E5AB] font-medium animate-fade-in px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-[#F3E5AB]/30 shadow-lg">
+              {slide.subtitle}
+            </span>
+          </div>
           <h1 key={`title-${currentSlide}`} className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl leading-tight tracking-tight font-light text-white animate-fade-in">
             {slide.title}<span className="italic font-normal">{slide.italicTitle}</span>
           </h1>
@@ -166,13 +168,8 @@ export default function Home() {
           <ChevronRight className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
         </button>
 
-        {/* Slide Counter & Progress Bar Indicators */}
+        {/* Slide Progress Bar Indicators */}
         <div className="absolute bottom-20 left-0 right-0 z-30 flex flex-col items-center space-y-3 px-6">
-          {/* Slide Counter */}
-          <div className="text-[10px] tracking-[0.3em] font-serif text-white/80">
-            0{currentSlide + 1} <span className="text-aurelia-gold">/</span> 0{HERO_SLIDES.length}
-          </div>
-
           {/* Progress Indicators */}
           <div className="flex items-center space-x-3 max-w-xs w-full justify-center">
             {HERO_SLIDES.map((_, index) => (
