@@ -130,6 +130,7 @@ export default function ConciergePanel({ onClose, isFullScreen = false }: Concie
       const text = `Help me choose a room. I am travelling with ${qAnswers.who}. What is most important to me is ${qAnswers.importance}. We are celebrating ${qAnswers.celebrating}. What would you recommend?`;
       handleSendMessage(text);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [qStep, qAnswers]);
 
   // Handle Lead Form Submission
